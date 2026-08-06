@@ -39,9 +39,9 @@ Demonstration
 ├── controllers/
 │   └── Pill_controller/
 │       └── Pill_controller.py      # Main Python control script
+|       └── captured_images/        # Folder where 'C' key snapshots are stored
 ├── worlds/
 │   └── gi_tract_simulation.wbt    # Webots world file with GI tract & capsule setup
-├── captured_images/               # Folder where 'C' key snapshots are stored
 └── README.md                      # Project documentation
 How It WorksKinematic ControllerDriving in 3D pipe environments using global coordinates often causes directional drift. This controller extracts the local longitudinal vector components ($f_x, f_y, f_z$) from column 3 of the orientation matrix:Pythonrot_matrix = robot_node.getOrientation()
 fx, fy, fz = rot_matrix[2], rot_matrix[5], rot_matrix[8]
