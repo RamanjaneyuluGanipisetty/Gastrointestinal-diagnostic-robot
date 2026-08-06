@@ -7,30 +7,12 @@ This project implements an orientation-aware kinematic control script in Python,
 
 Demonstration
 
-Short Preview
-
-
-
-
-
-
-
-
-![Capsule Robot Navigating GI Tract](./demo.gif)
-![Simulation View](medical_review.jpg)
-
-
-
-
-
-> 📹 **Full Video Demo:** [Watch the complete video recording here](./full_demo.mp4)
-## Demonstration
 
 ### Short Preview
 
 <p align="center">
   <img src="demo.gif" width="48%" />
-  <img src="medical_review.jpg" width="28%" />
+  <img src="medical_review.jpg" width="27%" />
 </p>
 
 > 📹 **Full Video Demo:** [Watch the complete video recording here](./full_demo.mp4)
