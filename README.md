@@ -41,15 +41,15 @@ Demonstration
 │       └── Pill_controller.py      # Main Python control script
 |       └── captured_images/        # Folder where 'C' key snapshots are stored
 ├── worlds/
-│   └── gi_tract_simulation.wbt    # Webots world file with GI tract & capsule setup
-└── README.md                      # Project documentation
-How It WorksKinematic ControllerDriving in 3D pipe environments using global coordinates often causes directional drift. This controller extracts the local longitudinal vector components ($f_x, f_y, f_z$) from column 3 of the orientation matrix:Pythonrot_matrix = robot_node.getOrientation()
+│   └── Trail_95.wbt                # Webots world file with GI tract & capsule setup
+└── README.md                       # Project documentation
+How It Works Kinematic Controller Driving in 3D pipe environments using global coordinates often causes directional drift. This controller extracts the local longitudinal vector components ($f_x, f_y, f_z$) from column 3 of the orientation matrix:Pythonrot_matrix = robot_node.getOrientation()
 fx, fy, fz = rot_matrix[2], rot_matrix[5], rot_matrix[8]
 
 # Target velocity aligned with camera view
 vx = fx * DRIVE_SPEED
 vy = fy * DRIVE_SPEED
 vz = fz * DRIVE_SPEED
-Telemetry & Alert FilteringInstead of printing sensor streams on every simulation step, telemetry is handled conditionally:Automated Alert: Fires once when optical or pressure thresholds are breached, then enters a 30-tick cooldown.Manual Telemetry (P): Prints a snapshot of all current sensor readings to the console.Image Capture (C): Saves the camera frame and logs the telemetry state at that exact moment.ControlsClick inside the 3D viewport in Webots to give it focus, then use the following keys:Key InputActionUP ARROWDrive Forward along camera facing vectorDOWN ARROWDrive Backward (Reverse)LEFT ARROWYaw Steer LeftRIGHT ARROWYaw Steer RightCCapture Image + Telemetry SnapshotPPrint Current Sensor Readings to ConsolePrerequisites & InstallationWebots Robot Simulator (R2023b or newer recommended): Download WebotsPython 3.x (Configured as Webots Python runtime).SetupClone this repository:Bashgit clone [https://github.com/RamanjaneyuluGanipisetty/
-Gastrointestinal-diagnostic-robotyour.git]
-Open Webots.Select File -> Open World... and load worlds/gi_tract_simulation.wbt.Ensure the Pill_controller is assigned to the Robotic_Pill solid node in the scene tree.Press Play ($\blacktriangleright$) to start the simulation.
+Telemetry & Alert Filtering: Instead of printing sensor streams on every simulation step, telemetry is handled conditionally: Automated Alert: Fires once when optical or pressure thresholds are breached, then enters a 30-tick cooldown .Manual Telemetry (P): Prints a snapshot of all current sensor readings to the console .Image Capture (C): Saves the camera frame and logs the telemetry state at that exact moment .Controls Click inside the 3D viewport in Webots to give it focus, then use the following keys: UP ARROW - Drive Forward along camera facing vector, DOWN ARROW - Drive Backward (Reverse), LEFT ARROW - Yaw Steer Left, RIGHT ARROW -Yaw Steer Right, C- Capture Image + Telemetry Snapshot, P - Print Current Sensor Readings to Console.
+Prerequisites & Installation: Webots Robot Simulator (R2023b or newer recommended): Download Webots, Python 3.x (Configured as Webots Python runtime). Setup Clone this repository: Bash git clone [https://github.com/RamanjaneyuluGanipisetty/Gastrointestinal-diagnostic-robotyour.git]
+Open Webots. Select File -> Open World... and load worlds/Trai_95.wbt.Ensure the Pill_controller is assigned to the Robotic_Pill solid node in the scene tree. Press Play (black triangle on top left corner) to start the simulation.
