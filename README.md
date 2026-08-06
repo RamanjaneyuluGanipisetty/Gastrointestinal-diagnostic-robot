@@ -8,7 +8,7 @@ This project implements an orientation-aware kinematic control script in Python,
 Demonstration
 
 
-### Short Preview
+### Short Preview and captured image 
 
 <p align="center">
   <img src="demo.gif" width="48%" />
