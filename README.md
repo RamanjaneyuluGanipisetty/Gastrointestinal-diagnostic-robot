@@ -38,7 +38,7 @@ Demonstration
 ```text
 ├── controllers/
 │   └── Pill_controller/
-│       └── Pill_controller.py      # Main Python control script
+│       ├── Pill_controller.py      # Main Python control script
 |       └── captured_images/        # Folder where 'C' key snapshots are stored
 ├── worlds/
 │   └── Trail_95.wbt                # Webots world file with GI tract & capsule setup
@@ -51,8 +51,10 @@ vx = fx * DRIVE_SPEED
 vy = fy * DRIVE_SPEED
 vz = fz * DRIVE_SPEED
 ---
-Telemetry & Alert Filtering
-Instead of printing sensor streams on every simulation step, telemetry is handled conditionally: Automated Alert: Fires once when optical or pressure thresholds are breached, then enters a 30-tick cooldown .Manual Telemetry (P): Prints a snapshot of all current sensor readings to the console .Image Capture (C): Saves the camera frame and logs the telemetry state at that exact moment
+**Telemetry & Alert Filtering**
+          └── Instead of printing sensor streams on every simulation step, telemetry is handled conditionally
+            ├── Automated Alert: Fires once when optical or pressure thresholds are breached, then enters a 30-tick cooldown
+            └── Manual Telemetry (P): Prints a snapshot of all current sensor readings to the console .Image Capture (C): Saves the camera frame and logs the telemetry state at that exact moment
 ---
 Controls
 Click inside the 3D viewport in Webots to give it focus, then use the following keys: UP ARROW - Drive Forward along camera facing vector, DOWN ARROW - Drive Backward (Reverse), LEFT ARROW - Yaw Steer Left, RIGHT ARROW -Yaw Steer Right, C- Capture Image + Telemetry Snapshot, P - Print Current Sensor Readings to Console.
