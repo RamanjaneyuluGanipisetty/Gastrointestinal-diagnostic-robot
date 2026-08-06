@@ -50,6 +50,14 @@ fx, fy, fz = rot_matrix[2], rot_matrix[5], rot_matrix[8]
 vx = fx * DRIVE_SPEED
 vy = fy * DRIVE_SPEED
 vz = fz * DRIVE_SPEED
-Telemetry & Alert Filtering: Instead of printing sensor streams on every simulation step, telemetry is handled conditionally: Automated Alert: Fires once when optical or pressure thresholds are breached, then enters a 30-tick cooldown .Manual Telemetry (P): Prints a snapshot of all current sensor readings to the console .Image Capture (C): Saves the camera frame and logs the telemetry state at that exact moment .Controls Click inside the 3D viewport in Webots to give it focus, then use the following keys: UP ARROW - Drive Forward along camera facing vector, DOWN ARROW - Drive Backward (Reverse), LEFT ARROW - Yaw Steer Left, RIGHT ARROW -Yaw Steer Right, C- Capture Image + Telemetry Snapshot, P - Print Current Sensor Readings to Console.
-Prerequisites & Installation: Webots Robot Simulator (R2023b or newer recommended): Download Webots, Python 3.x (Configured as Webots Python runtime). Setup Clone this repository: Bash git clone [https://github.com/RamanjaneyuluGanipisetty/Gastrointestinal-diagnostic-robotyour.git]
+---
+Telemetry & Alert Filtering
+Instead of printing sensor streams on every simulation step, telemetry is handled conditionally: Automated Alert: Fires once when optical or pressure thresholds are breached, then enters a 30-tick cooldown .Manual Telemetry (P): Prints a snapshot of all current sensor readings to the console .Image Capture (C): Saves the camera frame and logs the telemetry state at that exact moment
+---
+Controls
+Click inside the 3D viewport in Webots to give it focus, then use the following keys: UP ARROW - Drive Forward along camera facing vector, DOWN ARROW - Drive Backward (Reverse), LEFT ARROW - Yaw Steer Left, RIGHT ARROW -Yaw Steer Right, C- Capture Image + Telemetry Snapshot, P - Print Current Sensor Readings to Console.
+
+---
+Prerequisites & Installation
+Webots Robot Simulator (R2023b or newer recommended): Download Webots, Python 3.x (Configured as Webots Python runtime). Setup Clone this repository: Bash git clone [https://github.com/RamanjaneyuluGanipisetty/Gastrointestinal-diagnostic-robotyour.git]
 Open Webots. Select File -> Open World... and load worlds/Trai_95.wbt.Ensure the Pill_controller is assigned to the Robotic_Pill solid node in the scene tree. Press Play (black triangle on top left corner) to start the simulation.
