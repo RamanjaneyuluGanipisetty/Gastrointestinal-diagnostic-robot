@@ -51,7 +51,7 @@ vx = fx * DRIVE_SPEED
 vy = fy * DRIVE_SPEED
 vz = fz * DRIVE_SPEED
 ---
-**Telemetry & Alert Filtering**
+Telemetry & Alert Filtering
           └── Instead of printing sensor streams on every simulation step, telemetry is handled conditionally
             ├── Automated Alert: Fires once when optical or pressure thresholds are breached, then enters a 30-tick cooldown
             └── Manual Telemetry (P): Prints a snapshot of all current sensor readings to the console .Image Capture (C): Saves the camera frame and logs the telemetry state at that exact moment
