@@ -7,9 +7,9 @@ A simulated, manually controlled pill-sized capsule robot designed to navigate t
 Demonstration
 
 Short Preview
-> 🎥 **Short Demo Video:** [Watch the short preview recording](./demo.gif)
+![Capsule Robot Navigating GI Tract](./demo.gif)
 
-> 📹 **Full Length Video:** [Watch the complete video recording](./full_demo.mp4)
+> 📹 **Full Video Demo:** [Watch the complete video recording here](./full_demo.mp4)
 
 
 
