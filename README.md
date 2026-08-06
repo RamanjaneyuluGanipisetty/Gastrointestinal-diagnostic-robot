@@ -30,7 +30,7 @@ Short Preview
 
 <p align="center">
   <img src="demo.gif" width="48%" />
-  <img src="medical_review.jpg" width="24%" />
+  <img src="medical_review.jpg" width="28%" />
 </p>
 
 > 📹 **Full Video Demo:** [Watch the complete video recording here](./full_demo.mp4)
