@@ -24,7 +24,16 @@ Short Preview
 
 
 > 📹 **Full Video Demo:** [Watch the complete video recording here](./full_demo.mp4)
+## Demonstration
 
+### Short Preview
+
+<p align="center">
+  <img src="demo.gif" width="48%" />
+  <img src="medical_review.jpg" width="48%" />
+</p>
+
+> 📹 **Full Video Demo:** [Watch the complete video recording here](./full_demo.mp4)
 
 ---
 
