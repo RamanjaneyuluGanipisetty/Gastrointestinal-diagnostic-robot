@@ -1,0 +1,133 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+  gravity 0.1
+  basicTimeStep 8
+  physicsDisableTime 0
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        0.01
+      ]
+      bounce 0.1
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.0980099811476944 0.041877924866246044 0.9943039188318257 1.5648582142559238
+  position -0.2029921354798302 -1.5749248271188983 0.5327274882777242
+  followType "None"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+DEF Robotic_Pill Robot {
+  translation 0.00999271 0.000381646 0.4826147999999798
+  children [
+    DEF Parent_Transform Pose {
+      children [
+        DEF optical_Blood_Detector DistanceSensor {
+          name "optical_Blood_Detector"
+          type "infra-red"
+        }
+        DEF Pressure_Blood_Detector TouchSensor {
+          name "Pressure_Blood_Detector"
+          boundingObject Capsule {
+            height 0.02
+            radius 0.007
+            subdivision 16
+          }
+        }
+        DEF gyro Gyro {
+          children [
+            Compass {
+            }
+          ]
+        }
+        DEF CMOS_CAMERA Camera {
+          translation -8.83156e-08 3.22311e-05 -1.29395e-08
+          rotation -0.7040230890282451 -0.09213541165111505 0.7041750890474664 -2.9555953071795864
+          children [
+            SpotLight {
+              attenuation 0.5 0 0
+              beamWidth 0.5
+              cutOffAngle 0.8
+              direction 1 0 0
+              intensity 5
+              radius 0.1
+              castShadows TRUE
+            }
+          ]
+          fieldOfView 1.57
+          width 512
+          height 512
+          near 0.001
+          far 1
+          antiAliasing TRUE
+        }
+        DEF Robotic_Pill_Shape Shape {
+          appearance PBRAppearance {
+            baseColor 0.5 0.2 0.8
+          }
+          geometry DEF capsule_geometry Capsule {
+            height 0.02
+            radius 0.007
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject USE capsule_geometry
+  physics Physics {
+  }
+  controller "Pill_controller"
+  supervisor TRUE
+}
+DEF GI_Replicate Solid {
+  translation -0.19 1.32234e-06 -0.05
+  rotation 1 0 0 1.5708
+  children [
+    DEF GI_Transform Pose {
+      children [
+        DEF front_shape Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0.7 0.7
+            transparency 0.9
+            roughness 0.1
+            metalness 0.1
+          }
+          geometry Mesh {
+            url [
+              "front_side_for_visuals.stl"
+            ]
+          }
+        }
+        DEF Back_Half Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.3 0.3
+            roughness 0.1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "Back_Half_for_visualization.stl"
+            ]
+          }
+          castShadows FALSE
+        }
+      ]
+    }
+  ]
+  boundingObject Mesh {
+    url [
+      "for_bounding_full_final.stl"
+    ]
+  }
+}
