@@ -1,5 +1,5 @@
 
-Markdown# Active Capsule Endoscopy Robot Simulation (Webots)
+Active Capsule Endoscopy Robot Simulation (Webots)
 
 A 3D simulation of a manually controlled active capsule robot navigating a gastrointestinal (GI) tract model in Webots. 
 
